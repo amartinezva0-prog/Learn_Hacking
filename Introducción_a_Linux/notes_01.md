@@ -1,3 +1,3 @@
-# Apuntes
-## Curso Introducción al Hacking Savit4r
+# Apunte
+## Curso Introducción al Hacking Savit4r
 ---
