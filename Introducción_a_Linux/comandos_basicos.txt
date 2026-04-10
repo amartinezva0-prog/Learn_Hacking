@@ -3,5 +3,7 @@
     -Alt.: command -v
   -pwd = printea tu ruta
   -ls = lista directorios en tu ruta
-    - -l = lista dir. y docs
-  -
+    - -l = mas detallado
+  -echo $HOME = path dir. personal de usuario
+  -echo $PATH = lista de dir. donde OS busca para ejecutar en terminal. 
+  -cat /etc/shells = listar shells
