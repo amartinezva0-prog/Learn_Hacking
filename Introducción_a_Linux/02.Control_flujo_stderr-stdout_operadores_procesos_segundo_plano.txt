@@ -1,0 +1,54 @@
+2.Control del flujo stderr-stdout, operadores y procesos en segundo plano
+  -whoami; ls = concadenar comandos 
+  -whoami && ls = concadena comandos si 1er comando es exitoso 
+  -whoami || ls = concadena comandos aunq 1er comando falle
+  -cat $? = comando anterior (0 = exitoso) (>1 = erroneo) 
+  -whoami 2>/dev/null = en caso de error el output se envia al dir. /dev/null (Cualquier cosa que vaya a /dev/null se desvanece)
+  -cat /etc/host > /dev/null 2>&1 = Redirijes stderr-stdout(error-output del comm.) a /dev/null y no se print nada en consola
+  -cat /etc/host &>/dev/null = forma comoda del comando de arriba
+  -poner "&" al final de comando de proceso lo ejecutas en 2o plano, solo se muestra pid(numero identificatico)
+  -poner "& disown" pone el commando en 2 plano en independiente sin depender de terminal
+
+ Chuleta de Redirecciones en Bash
+
+| Redirección             | Descripción |
+|-------------------------|-------------|
+| cmd > archivo           | Redirige la salida estándar (stdout) de cmd a un archivo. |
+| cmd 1> archivo          | Igual que cmd > archivo. 1 es el descriptor de archivo (fd) por defecto para stdout. |
+| cmd 2> archivo          | Redirige el error estándar (stderr) de cmd a un archivo. 2 es el fd para stderr. |
+| cmd >> archivo          | Añade la salida estándar (stdout) de cmd al final de un archivo. |
+| cmd 2>> archivo         | Añade el error estándar (stderr) de cmd al final de un archivo. |
+| cmd &> archivo          | Redirige tanto stdout como stderr de cmd a un archivo. |
+| cmd > archivo 2>&1      | Otra forma de redirigir stdout y stderr a un archivo. ¡El orden importa! |
+| cmd > /dev/null         | Descarta la salida estándar (stdout) de cmd. |
+| cmd 2> /dev/null        | Descarta el error estándar (stderr) de cmd. |
+| cmd &> /dev/null        | Descarta tanto stdout como stderr de cmd. |
+| cmd < archivo           | Redirige el contenido del archivo a la entrada estándar (stdin) de cmd. |
+| cmd << EOL ... EOL      | Here-document: Redirige varias líneas a stdin. Si 'EOL' va entre comillas, el texto es literal. |
+| cmd <<- EOL             | Redirige varias líneas a stdin y elimina los tabuladores iniciales. |
+| cmd <<< "cadena"        | Here-string: Redirige una sola línea de texto a la entrada estándar (stdin) de cmd. |
+| exec 2> archivo         | Redirige el error estándar de todos los comandos siguientes a un archivo permanentemente. |
+| exec 3< archivo         | Abre un archivo para lectura usando un descriptor de archivo personalizado (3). |
+| exec 3> archivo         | Abre un archivo para escritura usando un descriptor de archivo personalizado (3). |
+| exec 3<> archivo        | Abre un archivo para lectura y escritura usando un descriptor personalizado (3). |
+| exec 3>&-               | Cierra un descriptor de archivo (3). |
+| exec 4>&3               | Hace que el descriptor 4 sea una copia del descriptor 3. |
+| exec 4>&3-              | Copia el descriptor 3 al 4 y cierra el descriptor 3. |
+| echo "foo" >&3          | Escribe en un descriptor de archivo personalizado (3). |
+| cat <&3                 | Lee desde un descriptor de archivo personalizado (3). |
+| (cmd1; cmd2) > archivo  | Redirige stdout de varios comandos a un archivo (usando una sub-shell). |
+| { cmd1; cmd2; } > archivo | Redirige stdout de varios comandos a un archivo (más rápido; sin sub-shell). |
+| exec 3<> /dev/tcp/h/p   | Abre una conexión TCP a host:puerto (característica de Bash, no de Linux). |
+| exec 3<> /dev/udp/h/p   | Abre una conexión UDP a host:puerto (característica de Bash, no de Linux). |
+| cmd <(cmd1)             | Redirige stdout de cmd1 a un FIFO anónimo y lo pasa como argumento a cmd. |
+| cmd < <(cmd1)           | Redirige stdout de cmd1 a un FIFO anónimo y luego redirige ese FIFO a stdin de cmd. |
+| cmd <(cmd1) <(cmd2)     | Redirige stdout de cmd1 y cmd2 a dos FIFOs anónimos y los pasa como argumentos a cmd. |
+| cmd1 >(cmd2)            | Ejecuta cmd2 con su stdin conectado a un FIFO anónimo y pasa el nombre del pipe a cmd1. |
+| cmd1 > >(cmd2)          | Ejecuta cmd2 con su stdin conectado a un FIFO, luego redirige stdout de cmd1 a ese pipe. |
+| cmd1 | cmd2              | Redirige stdout de cmd1 a la entrada estándar (stdin) de cmd2 (Tubería). |
+| cmd1 |& cmd2             | Redirige stdout y stderr de cmd1 a stdin de cmd2 (Bash 4.0+). |
+| cmd | tee archivo        | Redirige stdout de cmd a un archivo y además lo muestra por pantalla. |
+| exec {filew}> archivo   | Abre un archivo para escritura usando un descriptor con nombre {filew} (Bash 4.1+). |
+| cmd 3>&1 1>&2 2>&3      | Intercambia la salida estándar (stdout) y el error estándar (stderr) de cmd. |
+| cmd > >(c1) 2> >(c2)    | Envía stdout de cmd a cmd1 y stderr de cmd a cmd2. |
+| echo ${PIPESTATUS[@]}   | Muestra los códigos de salida de todos los comandos de la última tubería (pipe). |
