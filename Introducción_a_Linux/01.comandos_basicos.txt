@@ -7,3 +7,73 @@
   -echo $HOME = path dir. personal de usuario
   -echo $PATH = lista de dir. donde OS busca para ejecutar en terminal. 
   -cat /etc/shells = listar shells
+
+Resumen de Comandos Básicos de Linux
+
+| Comando    | Uso |
+|------------|-----|
+| alias      | Crear un atajo para otros comandos y opciones de comando. |
+| apt        | Instalar, eliminar y gestionar paquetes en distribuciones basadas en Debian. |
+| cal        | Mostrar un calendario en el terminal. |
+| cd         | Navegar por los directorios de Linux. |
+| chmod      | Modificar los permisos de lectura, escritura y ejecución de un archivo o directorio. |
+| chown      | Cambiar la propiedad de un archivo o directorio a otro usuario. |
+| clear      | Limpiar la pantalla del terminal. |
+| cmp        | Verificar si 2 archivos son idénticos. |
+| comm       | Combinar las funcionalidades de los comandos diff y cmp. |
+| cp         | Copiar y pegar archivos, contenido o directorios. |
+| df         | Informar del consumo de espacio de disco del sistema. |
+| diff       | Comparar el contenido de 2 archivos para encontrar diferencias. |
+| du         | Verificar cuánto espacio de almacenamiento ocupa una carpeta o directorio. |
+| echo       | Mostrar una línea de texto o cadena de caracteres en el terminal. |
+| exit       | Salir de la sesión del intérprete de comandos en curso. |
+| find       | Buscar archivos directamente desde la línea de comandos. |
+| free       | Mostrar un resumen del consumo de memoria RAM. |
+| grep       | Encontrar contenido específico dentro de archivos. |
+| head       | Mostrar las primeras 10 líneas de un archivo de texto. |
+| history    | Mostrar una lista de los comandos ejecutados recientemente. |
+| hostname   | Conocer el nombre del host del sistema. |
+| htop       | Monitorizar recursos y procesos del sistema en tiempo real (interactivo). |
+| ifconfig   | Mostrar interfaces de red, direcciones IP y MAC (obsoleto en algunas distros). |
+| ip         | Configurar y mostrar interfaces de red (reemplazo moderno de ifconfig). |
+| jobs       | Mostrar todos los procesos en ejecución en segundo plano y sus estados. |
+| kill       | Detener un programa o proceso que no responde de forma manual. |
+| less       | Inspeccionar archivos grandes permitiendo desplazamiento hacia adelante y atrás. |
+| ln         | Crear enlaces duros (hard) o simbólicos (soft) a otros archivos. |
+| ls         | Listar los archivos y directorios dentro de una ubicación. |
+| man        | Abrir el manual de usuario de cualquier comando. |
+| mkdir      | Crear un directorio o múltiples directorios al mismo tiempo. |
+| mv         | Mover o renombrar archivos y directorios. |
+| nano       | Editor de texto sencillo y fácil de usar desde la terminal. |
+| pacman     | Gestionar paquetes en distribuciones basadas en Arch Linux. |
+| passwd     | Añadir o cambiar la contraseña del usuario. |
+| ping       | Probar la conectividad de red con un host remoto. |
+| ps         | Generar un informe de los procesos en ejecución en el sistema. |
+| pwd        | Mostrar la ruta del directorio de trabajo actual. |
+| reset      | Reiniciar el terminal y restaurar la configuración por defecto. |
+| rm         | Eliminar archivos y carpetas. |
+| service    | Iniciar, parar y reiniciar servicios del sistema. |
+| shutdown   | Apagar, detener o reiniciar la máquina. |
+| ssh        | Conectarse a una máquina externa de forma segura mediante el protocolo SSH. |
+| su         | Ejecutar un programa o cambiar a un usuario diferente. |
+| sudo       | Realizar tareas con permisos de administrador (root). |
+| tail       | Mostrar las últimas 10 líneas de un archivo. |
+| tar        | Archivar o extraer archivos de paquetes .tar, .gz, etc. |
+| top        | Mostrar los procesos que consumen más recursos en tiempo real. |
+| touch      | Crear nuevos archivos vacíos y modificar marcas de tiempo. |
+| traceroute | Verificar la ruta que siguen los paquetes hacia un host específico. |
+| unalias    | Eliminar un alias previamente definido. |
+| uname      | Generar información detallada sobre el sistema operativo y el hardware. |
+| unzip      | Extraer archivos comprimidos en formato ZIP. |
+| useradd    | Crear un nuevo usuario en el sistema. |
+| userdel    | Eliminar un usuario existente. |
+| usermod    | Modificar los ajustes de un usuario existente. |
+| vi         | Editor de texto avanzado disponible en casi todos los sistemas Unix. |
+| wc         | Contar líneas, palabras y bytes en un archivo. |
+| wget       | Descargar archivos directamente desde Internet. |
+| whatis     | Mostrar una descripción breve sobre la funcionalidad de un comando. |
+| whereis    | Encontrar la ruta del binario, el código fuente y el manual de un comando. |
+| which      | Identificar la ruta del ejecutable que se lanza al invocar un comando. |
+| whoami     | Mostrar el nombre del usuario que ha iniciado la sesión. |
+| yum        | Gestionar paquetes en distribuciones basadas en RHEL (Fedora, CentOS). |
+| zip        | Comprimir archivos en formato ZIP. |
