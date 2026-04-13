@@ -4,4 +4,6 @@ Descripcion de archivo
     -exec 3> = escritura
   -whoami >&3 = el output se envia al archivo con ese num. identificador
   -exec 3>&- = no podras enviar mas texto a este file (contenido se mantiene)
-  -exec 3>&5 = copia el contenido del file 5 en el 8 (cualquier cosa que metas en cualquiera de los 2 se mete en el     dir.)
+  -exec 3>&5 = copia el contenido del file 5 en el 8 (cualquier cosa que metas en cualquiera de   los 2 se mete en el dir.)
+  -exec 3>&5- = copia el contenido del 5 al 3 y elimina el descriptor de archivos 5.
+ 
