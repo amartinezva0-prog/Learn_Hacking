@@ -1,0 +1,3 @@
+Lectura e interpretacion de permisos
+  -echo hola > file.txt = redirecciona el output en el file.txt. ( si pones otro youch desaparece el 1ero)
+  -
