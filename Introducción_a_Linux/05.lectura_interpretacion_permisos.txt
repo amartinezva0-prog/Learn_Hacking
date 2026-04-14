@@ -1,3 +1,22 @@
 Lectura e interpretacion de permisos
   -echo hola > file.txt = redirecciona el output en el file.txt. ( si pones otro youch desaparece el 1ero)
+  -echo hola >> file.txt = no sobreescribe el texto existente, lo pone debajo.
+  -rm file.txt = borrar archivo
+  -nano file.txt = crea archivo y lo abre para editar.
+  -vi file = editor como nano
+  -rm -r * =-r: recursividad(todos los directorios de un directorio) *:borrar todo
+Perrmisos:  
+  -rwx|rw-|r-- = r:read w:write x: dir:se puede entrar si perteneces al grupo / archivo: es ejecutable
+  -drw-r--r-- = d:directorio
+  -1er par = Permiso propietario
+  -2o par = Permisos del grupo
+  -3er par = permiso de otros
+  -user user = 1er user: propietario / 2o user: grupo
+  -chmod u/g/o/a r/w/x = cambiar permisos
+  -chmod {nom.grupo} {nom.dir} = cambiar grupo del dir.
+  -chgrp pepe (dir.) = cambiar grupo de dir
+  -chown pepe (dir.) = cambiar propietario de dir
+  -useradd = añadir usuario a home (-s : añadir bash ej./bin/bash / -d añadir dir. de user ej./homr/pepe)
+  -userdel = eliminar usuario.
+  -passwd pepe = cambiar constraseña de usuario como root
   -
