@@ -16,7 +16,10 @@ Perrmisos:
   -chmod {nom.grupo} {nom.dir} = cambiar grupo del dir.
   -chgrp pepe (dir.) = cambiar grupo de dir
   -chown pepe (dir.) = cambiar propietario de dir
+    -chown pepe:root pepe = cambiar owner y grupo misma linea
   -useradd = añadir usuario a home (-s : añadir bash ej./bin/bash / -d añadir dir. de user ej./homr/pepe)
   -userdel = eliminar usuario.
   -passwd pepe = cambiar constraseña de usuario como root
-  -
+  
+  -groupadd (nombre) = agregar grupo
+  -usermod -aG (drupo) (user) = agregar usuario a grupo
