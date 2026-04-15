@@ -1,0 +1,9 @@
+Ip
+  -hostname -I = muestra ip
+
+Mac
+  -identificador de 48 bits que es unica para cada tarjeta o dispositivo de red
+  -ej. 08:00:27 | :ed:b7:a7 = 2 pares 2o par: identifica el tipo de dispositivo
+
+
+
